@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>SolidWorks: Overview</title>
+    <style type="text/css">span.eqn { white-space: nowrap; }</style>
+    <meta name="description" content="SolidWorks overview">
+    <meta name="author" content="garthz">
+  </head>
+  <body>
+
+    <h1>SolidWorks Overview for Intro to Physical Computing</h1>
+
+    <p>We have several CAD
+      (<a href="http://en.wikipedia.org/wiki/Computer-aided_design">computer-aided
+      design</a>) tools available for designing physical structures,
+      namely <a href="http://www.rhino3d.com/">Rhino</a>
+      and <a href="http://www.solidworks.com/">SolidWorks</a>.  This overview is
+      intended as a high-level introduction to the essential features of
+      SolidWorks which make it useful for this course.</p>
+
+    <p>SolidWorks is a <em>parametric</em> design tool.  In the broadest sense,
+      this makes it closer to visual programming than drawing: parts are defined
+      by geometric <b>sketch</b> primitives constrained by <b>relations</b> and
+      processed into geometric <b>features</b> through operations.  So a
+      cylindrical part might be defined by a circle on a plane that is extruded
+      for a given distance or up to a given point.  Unlike Rhino, that tree of
+      elements is what <em>defines</em> the part and is kept through the life of
+      the part.  So if that circle is moved, or split or rehaped, or the
+      extrusion distance changed, the geometry of the solid form can be
+      recomputed.</p>
+
+    <p>Using parametric design efficiently involves structuring the part model
+      so that it accurately captures <em>design intent</em>.  E.g. if two
+      particular holes are mechanically related, their relative position can be
+      defined by dimensions and relations which capture that mechanical
+      relationship. That way, if other features change and the part shape
+      changes, the holes can maintain their relationship and preserve the
+      intent.</p>
+
+    <p>SolidWorks is especially suited for designing <b>assemblies</b>
+      of <b>parts</b>.  Machines are typically built from individually
+      manufactured parts assembled together.  This is captured in the design
+      model by creating assemblies which define the relative position of
+      individual parts via <b>mates</b> which define geometric constraints.
+      For example, a shaft can be mated to a bearing hole by a concentric mate
+      which limits it to axial rotation and translation (2 remaining freedoms),
+      then further limited by a co-planarity mate between a groove face,
+      snap-ring face, and bearing face which then leaves only axial rotation
+      free.  If mates correctly correspond to actual physical constraints, the
+      model helps visualize that all parts have the correct freedoms.  And the
+      parametric nature of the constraint tree means that many part dimensions
+      can be changed and other part positions can adapt.</p>
+
+    <p>A negative side-effect of the parametric <b>feature tree</b> is that if
+      the structure of the the design intent changes, it can be difficult to
+      modify the tree structure to match.  This is because all features are
+      defined in relation to existing features, so if a <b>parent feature</b> is
+      removed, the <b>child feature</b> becomes only partly defined.  It takes a
+      great deal of practice to learn to structure models well at the beginning
+      to minimize these problems later.</p>
+
+    <h3>Essential Ideas and Actions</h3>
+
+    <ol>
+      <li>reference features: planes, faces</li>
+      <li>sketch entities: lines, circles, construction lines</li>
+      <li>sketch relations: symmetric, equal, collinear, concentric, tangent, dimension</li>
+      <li>feature operations: extrude, cut, mirror, radial and linear patterns</li>
+      <li>assembly mates: coincident, concentric, distance, parallel</li>
+      <li>number entry boxes: numeric input can include units and calculations</li>
+      <li>hole wizard</li>
+      <li>configurations</li>
+      <li>view mates, isolate, suppress</li>
+    </ol>
+
+    <h3>Some Good Heuristics</h3>
+
+    <ol>
+      <li>Always sketch your parts on paper first.</li>
+
+      <li>If you think it's time to start modeling, <em>wait</em> and do another
+	paper sketch first.  It is so much faster and generative.</li>
+
+      <li>If you need a standard component, check online sources for a free
+	model before drawing it from scratch.  Be warned, though, that the exact
+	part models may have much more detail than you need.  Modeling geometry
+	is as much a process of knowing what to <em>leave out</em> for a
+	particular problem.</li>
+
+      <li>Choose a system of units and stick with it.  The reality of working in
+	the USA is that metric and inch exist side by side throughout the
+	catalogs and stock.  It can be cheaper to buy inch-sized parts and
+	fasteners, but many imported parts are designed in millimeters.</li>
+
+      <li>Before you begin modeling, consider the following: natural symmetries
+	in the part, the core form which is most unlikely to change and thus
+	suitable to be a base feature, whether the part may exist in several
+	variations.</li>
+
+      <li>It can be hard to appreciate the scale of a CAD feature as the
+	computer monitor can perfectly magnify or shrink details.  I recommend
+	keeping rulers and calipers handy for reference to remind you of exactly
+	how much 0.001 inch or 0.1 mm actually looks in the world.</li>
+
+      <li>A solid model defined by mathematical primitives is <em>mathematically
+	  exact</em>.  Of course, any rendering of it as pixels, cutting line
+	  segments, or rendered polygons is an approximation, and the precision
+	  is ultimately limited by computer numerical representation.  But best
+	  results are achieved by taking advantage of mathematical constraints
+	  such as relations and mates to maintain that exactitude.  So for
+	  example, it is possible just to visually position parts very closely
+	  in an assembly without defining mates and have it look acceptable for
+	  a drawing.  But these small errors will tend to cause problems later
+	  when dimensions are slightly wrong in cut parts, and it defeats the
+	  ability of the tool to help find errors such as overlapping
+	  parts.</li>
+
+    </ol>
+
+
+    <h3>Examples</h3>
+
+    <p>This repository includes sample parts and projects, see <a href="README.md">the README file.</a></p>
+
+    <p>A complex snap-fit plastic robot assembly example is available for
+      reference
+      here: <a href="https://github.com/OrigamiRobotics/romibo-mechanism"><code>https://github.com/OrigamiRobotics/romibo-mechanism</code></a>.
+      This was largely designed by Garth Zeglin, and demonstrates several ideas
+      for creating 3-D structures from flat parts using interlocking joints.</p>
+
+    <h3>References</h3>
+
+    <p>The
+      IDeATe <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15294-f14/">15-294
+      Rapid Prototyping Technologies</a> course taught by Dave Touretzky has
+      many links to information and tutorials.</p>
+
+
+  </body>
+</html>
