@@ -21,6 +21,7 @@ The folders labeled 'example' are designed to highlight principles of mechanical
 design for the course.  These are not necessarily fully realized designs ready
 to fabricate, they are demonstrations and building blocks.
 
+	  laser_test_example    Several test parts for demonstrating laser cutter kerf.
 	  linkage_example	    Four-bar linkage to demonstrate underconstrained assemblies
 	  pendulum_example	    Extrusion structure with ball-bearing clevis pin joint and a fixed T-joint.
 	  spokes_example	    Laser-cuttable joining plates for building complext extrusion structures.
