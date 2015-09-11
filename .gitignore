@@ -1,2 +1,6 @@
 # ignore emacs backup files
 *~
+
+# ignore SolidWorks temporary files
+~$*.SLDPRT
+~$*.SLDASM
