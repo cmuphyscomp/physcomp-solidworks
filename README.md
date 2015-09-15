@@ -21,12 +21,13 @@ The folders labeled 'example' are designed to highlight principles of mechanical
 design for the course.  These are not necessarily fully realized designs ready
 to fabricate, they are demonstrations and building blocks.
 
-	  laser_test_example    Several test parts for demonstrating laser cutter kerf.
-	  linkage_example	    Four-bar linkage to demonstrate underconstrained assemblies
-	  pendulum_example	    Extrusion structure with ball-bearing clevis pin joint and a fixed T-joint.
-	  spokes_example	    Laser-cuttable joining plates for building complext extrusion structures.
-	  turntable_example	    Motor and gear example using a ball-bearing supported shaft and parallel plate structure.
-	  wedge_examples    	Examples of laser-cuttable wedge-and-slot structures for creating rigid 3D structures from flat parts.
+	  laser_test_example      Several test parts for demonstrating laser cutter kerf.
+	  linkage_example	      Four-bar linkage to demonstrate underconstrained assemblies
+	  pendulum_example	      Extrusion structure with ball-bearing clevis pin joint and a fixed T-joint.
+	  spokes_example	      Laser-cuttable joining plates for building complext extrusion structures.
+	  switch_trigger_example  Simple lever mechanism to extend microswitch travel and shape sensing region.
+	  turntable_example	      Motor and gear example using a ball-bearing supported shaft and parallel plate structure.
+	  wedge_examples    	  Examples of laser-cuttable wedge-and-slot structures for creating rigid 3D structures from flat parts.
 
 A following open-source designs for OpenBeam and related components were
 downloaded from thingiverse.com and are subject to the original licensing terms:
