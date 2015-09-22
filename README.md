@@ -15,6 +15,10 @@ A few useful parts have been provided by the instructors.
       library_parts	        Simplified standard small parts (bearings, spacers, etc.)
       gear_library	        A few sample gears generated using an online tool.
 
+HSMWorks is a CAM tool for generating cutting plans for the CNC router from a SolidWorks model:
+
+	  HSMWorks				Folder with tool library and post-processor script for the IDeATe CNC router.
+
 The gear parts were generated using <http://hessmer.org/gears/InvoluteSpurGearBuilder.html>
 
 The folders labeled 'example' are designed to highlight principles of mechanical
