@@ -12,8 +12,8 @@ To add the tool library to your HSMWorks installation:
 2. From within SolidWorks, select CAM/Tool Library to open the library interface.
 3. Right-click on any folder with the upper-left tree view, and select "Add Library Folder."
 4. Select the folder containing this file you are reading (physcomp-solidworks/HSMWorks).
-
-If you need to edit the tool library, you may wish to make a duplicate first to avoid
+5. You should see the tool library named "2015_IDeATe_CNT_Motion" appear under a new tree entry "HSMWorks".
+6. It is highly recommended that you make a duplicate of the .hsmlib file under a different name before customizing tool entries to avoid
 problems with future repository updates.
 
 
